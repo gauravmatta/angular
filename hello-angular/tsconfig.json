@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "target": "es5",
+      "module": "es2015",
+      "declaration": false,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "removeComments": false,
+      "noImplicitAny": false,
+      "outDir": "output",
+      "lib": ["ES2017","DOM"],
+      "watch": true,
+    },
+    "compileOnSave": false,
+    "include": ["main.ts"],
+    "exclude": [
+      "node_modules"
+    ]
+  }

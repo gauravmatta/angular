@@ -1,0 +1,25 @@
+{
+  "name": "hello-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "systemjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gurav Matta",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.9",
+    "angular2": "^2.0.0-beta.21",
+    "es6-promise": "^3.0.2",
+    "es6-shim": "^0.35.0",
+    "reflect-metadata": "0.1.2",
+    "rxjs": "^5.5.12",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "systemjs": "^0.19.16",
+    "typescript": "^2.4.0"
+  }
+}
