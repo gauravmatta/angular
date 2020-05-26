@@ -31,7 +31,7 @@ System.register(["angular2/core", "angular2/platform/browser"], function (export
                 Example = __decorate([
                     core_1.Component({
                         selector: 'example',
-                        template: '<div>Hello Example</div>'
+                        template: '<div>Hello Example {{ id }} </div>'
                     })
                 ], Example);
                 return Example;
@@ -39,6 +39,7 @@ System.register(["angular2/core", "angular2/platform/browser"], function (export
             StarterTemplate = /** @class */ (function () {
                 function StarterTemplate() {
                     this.name = 'Starter Templates are here!!';
+                    this.appId = 'This is the appId Value';
                 }
                 StarterTemplate = __decorate([
                     core_1.Component({

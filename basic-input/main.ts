@@ -3,7 +3,7 @@ import {bootstrap} from 'angular2/platform/browser';
 
 @Component({
 selector:'example',
-template:'<div>Hello Example</div>'
+template:'<div>Hello Example {{ id }} </div>'
 })
 class Example {
   @Input() private id: string;
@@ -19,8 +19,10 @@ class Example {
 })
 class StarterTemplate  {
   private name: string;
+  private appId: string;
   constructor () {
     this.name = 'Starter Templates are here!!';
+    this.appId='This is the appId Value';
   }
 }
 
