@@ -23,12 +23,14 @@ System.register(["angular2/core", "angular2/platform/browser"], function (export
         execute: function () {
             Example = /** @class */ (function () {
                 function Example() {
+                    this.fontColor = 'blue';
                 }
                 Example = __decorate([
                     core_1.Component({
                         selector: 'example',
-                        template: '<div [style.color]="\'red\'"> Hello Binding</div>'
-                    })
+                        template: '<div [style.color]="fontColor"> Hello Binding</div>'
+                    }),
+                    __metadata("design:paramtypes", [])
                 ], Example);
                 return Example;
             }());

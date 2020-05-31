@@ -3,10 +3,13 @@ import {bootstrap} from 'angular2/platform/browser';
 
 @Component({
 selector:'example',
-template:'<div [style.color]="\'red\'"> Hello Binding</div>'
+template:'<div [style.color]="fontColor"> Hello Binding</div>'
 })
 class Example {
-
+private fontColor: string;
+constructor(){
+  this.fontColor='blue';
+}
 }
 
 /**
