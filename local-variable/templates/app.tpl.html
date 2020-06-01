@@ -1,0 +1,9 @@
+<h1>{{ name }}</h1>
+<h2 #title></h2>
+<button (click)="setTitle(title)">Set Title</button>
+
+<p>{{usernameValue}}</p>
+<input type="text" #username (input)="setUsername(username.value)"/>
+
+<p>{{ myValue }}</p>
+<input type="text" #name (input)="myValue = name.value"/>
