@@ -9,7 +9,7 @@ System.register(["angular2/core", "angular2/platform/browser"], function (export
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, browser_1, SimpleDirective, HostComponent;
+    var core_1, browser_1, Example, StarterTemplate;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -21,54 +21,40 @@ System.register(["angular2/core", "angular2/platform/browser"], function (export
             }
         ],
         execute: function () {
-            SimpleDirective = /** @class */ (function () {
-                function SimpleDirective(elr, renderer) {
-                    this.elr = elr;
-                    this.renderer = renderer;
-                    this.isHidden = false;
-                    elr.nativeElement.style.background = 'green';
+            Example = /** @class */ (function () {
+                function Example() {
                 }
-                SimpleDirective.prototype.handleClick = function () {
-                    console.log("I was clicked");
-                };
-                SimpleDirective.prototype.ngAfterViewInit = function () {
-                    this.renderer.setElementProperty(this.elr.nativeElement, 'innerHTML', this.appId);
-                };
                 __decorate([
-                    core_1.Input('aId'),
+                    core_1.Input(),
                     __metadata("design:type", String)
-                ], SimpleDirective.prototype, "appId", void 0);
-                SimpleDirective = __decorate([
-                    core_1.Directive({
-                        selector: '[simple-directive]',
-                        host: {
-                            '(click)': 'handleClick()',
-                            '[hidden]': 'isHidden'
-                        }
-                    }),
-                    __metadata("design:paramtypes", [core_1.ElementRef, core_1.Renderer])
-                ], SimpleDirective);
-                return SimpleDirective;
+                ], Example.prototype, "id", void 0);
+                Example = __decorate([
+                    core_1.Component({
+                        selector: 'example',
+                        template: '<div>Hello Example {{ id }} </div>'
+                    })
+                ], Example);
+                return Example;
             }());
-            HostComponent = /** @class */ (function () {
-                function HostComponent() {
-                    this.name = 'Directive Host';
+            StarterTemplate = /** @class */ (function () {
+                function StarterTemplate() {
+                    this.name = 'Starter Templates are here!!';
                     this.appId = 'This is the appId Value';
                 }
-                HostComponent = __decorate([
+                StarterTemplate = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        directives: [SimpleDirective],
+                        directives: [Example],
                         templateUrl: 'templates/app.tpl.html',
                     }),
                     __metadata("design:paramtypes", [])
-                ], HostComponent);
-                return HostComponent;
+                ], StarterTemplate);
+                return StarterTemplate;
             }());
             /**
              * Bootstrap the app with `StarterTemplate`.
              */
-            browser_1.bootstrap(HostComponent, []);
+            browser_1.bootstrap(StarterTemplate, []);
         }
     };
 });
