@@ -1,3 +1,7 @@
 <h1>{{ name }}</h1>
-<example [id]="'5'"></example>
-<example [id]="appId"></example>
+<div [ngSwitch]="status">
+    <template [ngSwitchWhen]="'error'">Error Message</template>
+    <template [ngSwitchWhen]="'success'">Done</template>
+    <template [ngSwitchWhen]="'progress'">In Progress</template>
+    <template ngSwitchDefault>Unknown</template>
+</div>
