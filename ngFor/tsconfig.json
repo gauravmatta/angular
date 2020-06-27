@@ -10,7 +10,8 @@
     "removeComments": false,
     "noImplicitAny": false,
     "outDir": "output",
-    "watch": true
+    "watch": true,
+    "noStrictGenericChecks": true
   },
   "exclude": [
     "node_modules"

@@ -1,3 +1,21 @@
 <h1>{{ name }}</h1>
-<example [id]="'5'"></example>
-<example [id]="appId"></example>
+<ul>
+    <li *ngFor="let num of nums" >{{num}}</li>
+</ul>
+<ul>
+    <li *ngFor="let user of users" >{{user.name}}, {{user.id}}, {{user.isActive ? 'Active' : 'Inactive'}}</li>
+</ul>
+<table>
+    <thead>
+    <tr>
+        <th *ngFor="let header of headers" >{{header}}</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users" >
+            <td>{{user.name}}</td>
+            <td>{{user.id}}</td>
+            <td>{{user.isActive ? 'Active' : 'Inactive'}}</td>
+        </tr>
+    </tbody>
+</table>

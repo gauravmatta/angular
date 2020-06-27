@@ -1,28 +1,28 @@
 import {Component, Input} from 'angular2/core';
 import {bootstrap} from 'angular2/platform/browser';
 
-@Component({
-selector:'example',
-template:'<div>Hello Example {{ id }} </div>'
-})
-class Example {
-  @Input() private id: string;
-}
 
 /**
  * Define the Component.
  */
 @Component({
   selector: 'app',
-  directives:[Example],
   templateUrl : 'templates/app.tpl.html',
 })
 class StarterTemplate  {
   private name: string;
-  private appId: string;
+  private nums: number[];
+  private users: any[];
+  private headers: any[];
   constructor () {
-    this.name = 'Starter Templates are here!!';
-    this.appId='This is the appId Value';
+    this.name = 'ngFor Directive';
+    this.nums = [1,2,3,4];
+    this.users=[
+      {name: 'Tom', id:'1', isActive:false},
+      {name: 'Kim', id:'2', isActive:true},
+      {name: 'John', id:'3', isActive:false}
+    ]
+    this.headers= Object.keys(this.users[0]);
   }
 }
 
