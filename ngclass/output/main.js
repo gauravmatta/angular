@@ -23,14 +23,11 @@ System.register(["angular2/core", "angular2/platform/browser"], function (export
         execute: function () {
             StarterTemplate = /** @class */ (function () {
                 function StarterTemplate() {
-                    this.name = 'ngFor Directive';
-                    this.nums = [1, 2, 3, 4];
-                    this.users = [
-                        { name: 'Tom', id: '1', isActive: false },
-                        { name: 'Kim', id: '2', isActive: true },
-                        { name: 'John', id: '3', isActive: false }
-                    ];
-                    this.headers = Object.keys(this.users[0]);
+                    this.name = 'NG Class Example';
+                    this.appId = 'This is the appId Value';
+                    this.titleClasses = {
+                        isActive: true
+                    };
                 }
                 StarterTemplate = __decorate([
                     core_1.Component({
