@@ -26,7 +26,8 @@ System.register(["angular2/core", "angular2/platform/browser"], function (export
                     this.name = 'NG Class Example';
                     this.appId = 'This is the appId Value';
                     this.titleClasses = {
-                        isActive: true
+                        isActive: true,
+                        another: true
                     };
                 }
                 StarterTemplate = __decorate([

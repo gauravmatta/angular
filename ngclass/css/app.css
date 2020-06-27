@@ -16,3 +16,7 @@ code {
 .title.isActive{
 color:red;
 }
+
+.title.another{
+  padding-left: 20px;
+}

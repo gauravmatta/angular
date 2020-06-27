@@ -16,7 +16,8 @@ class StarterTemplate  {
     this.name = 'NG Class Example';
     this.appId='This is the appId Value';
     this.titleClasses = {
-      isActive: true
+      isActive: true,
+      another: true
     }
 }
 }
