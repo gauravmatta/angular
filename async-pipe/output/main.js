@@ -23,8 +23,20 @@ System.register(["angular2/core", "angular2/platform/browser"], function (export
         execute: function () {
             StarterTemplate = /** @class */ (function () {
                 function StarterTemplate() {
+                    var _this = this;
+                    this.resolveValue = null;
                     this.name = 'Async Pipe Example';
+                    this.value = new Promise(function (resolve, reject) {
+                        _this.resolveValue = resolve;
+                    });
+                    // console.log(this.value);
                 }
+                StarterTemplate.prototype.setValue = function () {
+                    var _this = this;
+                    setTimeout(function () {
+                        _this.resolveValue('Future Value');
+                    }, 1000);
+                };
                 StarterTemplate = __decorate([
                     core_1.Component({
                         selector: 'app',
