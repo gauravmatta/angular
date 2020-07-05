@@ -1,16 +1,1 @@
 <h1>{{ name }}</h1>
-<h1>
-    value is: {{ '25' | pixelPipe }}
-</h1>
-<h1>
-    New Value is: {{ '25' | unit:'%':'2' }}
-</h1>
-<p>Pipe value from Component is : {{value}}</p>
-<h2>Today is : {{today | date:'yMMMEEEh'}}</h2>
-<h2>Today coming from controller is : {{todayInside}}</h2>
-<h3>{{'Slice String' | slice:2:7}}</h3>
-<ul>
-    <li *ngFor="#student of students |slice:1:3" >
-        {{student.id}},{{student.name}}
-    </li>
-</ul>
