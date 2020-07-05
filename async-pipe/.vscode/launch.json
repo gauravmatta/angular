@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome Debugger",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://127.0.0.1:8080/",
+      "sourceMaps": true,
+      "webRoot": "${workspaceFolder}",
+      "runtimeExecutable": "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
+      "runtimeArgs": [
+        "--remote-debugging-port=8080",
+        "--incognito"
+      ]
+    }
+  ]
+}
