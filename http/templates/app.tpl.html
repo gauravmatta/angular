@@ -1,3 +1,6 @@
 <h1>{{ name }}</h1>
-<example [id]="'5'"></example>
-<example [id]="appId"></example>
+<ul>
+    <li *ngFor="let student of students" >
+        {{student.first_name}},{{student.last_name}}({{student.email}})
+    </li>
+</ul>

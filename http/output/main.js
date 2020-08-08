@@ -1,4 +1,4 @@
-System.register(["angular2/core", "angular2/platform/browser"], function (exports_1, context_1) {
+System.register(["angular2/core", "angular2/platform/browser", "angular2/http"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -9,7 +9,7 @@ System.register(["angular2/core", "angular2/platform/browser"], function (export
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, browser_1, Example, StarterTemplate;
+    var core_1, browser_1, http_1, StudentSvc, StarterTemplate;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -18,35 +18,40 @@ System.register(["angular2/core", "angular2/platform/browser"], function (export
             },
             function (browser_1_1) {
                 browser_1 = browser_1_1;
+            },
+            function (http_1_1) {
+                http_1 = http_1_1;
             }
         ],
         execute: function () {
-            Example = /** @class */ (function () {
-                function Example() {
+            StudentSvc = /** @class */ (function () {
+                function StudentSvc(http) {
+                    this.http = http;
                 }
-                __decorate([
-                    core_1.Input(),
-                    __metadata("design:type", String)
-                ], Example.prototype, "id", void 0);
-                Example = __decorate([
-                    core_1.Component({
-                        selector: 'example',
-                        template: '<div>Hello Example {{ id }} </div>'
-                    })
-                ], Example);
-                return Example;
+                StudentSvc.prototype.getStudents = function () {
+                    return this.http.get('https://reqres.in/api/users');
+                };
+                StudentSvc = __decorate([
+                    core_1.Injectable(),
+                    __metadata("design:paramtypes", [http_1.Http])
+                ], StudentSvc);
+                return StudentSvc;
             }());
             StarterTemplate = /** @class */ (function () {
-                function StarterTemplate() {
+                function StarterTemplate(studentSvc) {
+                    var _this = this;
                     this.name = 'Http Service Example';
+                    studentSvc.getStudents().subscribe(function (resp) {
+                        _this.students = resp.json().data;
+                    });
                 }
                 StarterTemplate = __decorate([
                     core_1.Component({
                         selector: 'app',
-                        directives: [Example],
                         templateUrl: 'templates/app.tpl.html',
+                        providers: [http_1.HTTP_PROVIDERS, StudentSvc]
                     }),
-                    __metadata("design:paramtypes", [])
+                    __metadata("design:paramtypes", [StudentSvc])
                 ], StarterTemplate);
                 return StarterTemplate;
             }());
