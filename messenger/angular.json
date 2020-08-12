@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "messenger"
+    }
+  },
+  "defaultProject": "messenger",
+  "cli": {
+    "analytics": "e2bd3904-0f27-41e2-801e-7be60cc5cb83"
+  }
 }
