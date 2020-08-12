@@ -8,10 +8,10 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/messenger/tsconfig.app.json"
+      "path": "./tsconfig.app.json"
     },
     {
-      "path": "./projects/messenger/tsconfig.spec.json"
+      "path": "./tsconfig.spec.json"
     }
 ]
 }
